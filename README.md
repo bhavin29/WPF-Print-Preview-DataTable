@@ -19,12 +19,15 @@ In   **XAML**
     <Button Name="printButton" Content="Print Click="printButton_Click" />
 
 In   **Code Behind**
-           
+            
+            // Simple Scenario Example 
+            wPFPrintUtility.CreateAndVisualizeDataTable(flowDocument, mockDataTable, "2017 Sales Project", "My Footer");
+            ---------------OR----------------------
             //Sure you should replace this dataTable by your actual datatable.
             DataTable mockDataTable = wPFPrintUtility.CreateMockDataTableForTest();
             GlobalFormating.DataRowsEvenBrush = Brushes.AliceBlue;
             wPFPrintUtility.CreateAndVisualizeDataTable(flowDocument, mockDataTable, "2017 Sales Project", "My Footer");
-            wPFPrintUtility.CreateAndVisualizeDataTable(flowDocument, mockDataTable, null, null);
+            //wPFPrintUtility.CreateAndVisualizeDataTable(flowDocument, mockDataTable, null, null); 
             ---------------OR----------------------
             //Sure you should replace this dataTable by your actual datatable.
             DataTable mockDataTable = wPFPrintUtility.CreateMockDataTableForTest();
@@ -40,6 +43,11 @@ In   **Code Behind**
             GlobalFormating.DataRowsEvenBrush = Brushes.AliceBlue;
             Table table = wPFPrintUtility.CreateAndVisualizeDataTable();
             flowDocument.Blocks.Add(table);
+            
+            private void printButton_Click(object sender, RoutedEventArgs e)
+                {
+                    wPFPrintUtility.Print(flowDocument);
+                }
 
 
 
