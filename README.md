@@ -1,4 +1,3 @@
-# WPF Print & Preview DataTable Class
 WPF Print & Preview DataTable Class
 ===================
 
@@ -16,13 +15,12 @@ In   **XAML**
                 <Paragraph Name="headParagraph" FontSize="20" FontWeight="Bold">Header Paragraph</Paragraph>
                 <Paragraph Name="ndHeadParagraph" FontSize="15">nd Header Paragraph</Paragraph>
             </FlowDocument>
-        </FlowDocumentReader>
-        <Button Name="printButton" Content="Print                
-                Click="printButton_Click" />
+    </FlowDocumentReader>
+    <Button Name="printButton" Content="Print Click="printButton_Click" />
 
 In   **Code Behind**
            
-    //Sure you should replace this dataTable by your actual datatable.
+            //Sure you should replace this dataTable by your actual datatable.
             DataTable mockDataTable = wPFPrintUtility.CreateMockDataTableForTest();
             GlobalFormating.DataRowsEvenBrush = Brushes.AliceBlue;
             wPFPrintUtility.CreateAndVisualizeDataTable(flowDocument, mockDataTable, "2017 Sales Project", "My Footer");
