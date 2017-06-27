@@ -1,2 +1,2 @@
-# WPF-Print & Preview
+# WPF Print & Preview DataTable 
 WPF Datatable Print Class
