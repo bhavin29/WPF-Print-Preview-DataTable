@@ -2,7 +2,7 @@ WPF Print & Preview DataTable Class
 ===================
 
 
-**WPF Utility class that helps you to Print & Preview datable**
+**WPF Utility class that helps you to Print & Preview DataTable**
 
 ----------
 
